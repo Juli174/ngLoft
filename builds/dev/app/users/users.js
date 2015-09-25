@@ -2,12 +2,13 @@
 	'use strict';
 
 	angular
-		.module('Loft.Users', [])
+		.module('Loft.Users', ['ngRoute'])
 		.config(UsersConfig)
 		.controller('UsersCtrl', UsersController);
 
 	function UsersController(){
 		this.hello = "Users";
+		this.usersList = [];
 	}
 
 	function UsersConfig($routeProvider){
