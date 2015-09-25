@@ -12,7 +12,7 @@ module.exports = function(config){
 
 		autoWatch : true,
 
-		framework: ['jasmine'],
+		frameworks: ['jasmine'],
 
 		browser:[
 			'Chrome',
@@ -21,11 +21,11 @@ module.exports = function(config){
 			// 'Opera'
 		],
 
-		reportest: ['progress', 'junit']
+		reportest: ['progress', 'junit'],
 		junitReporter:{
 			outputDir: 'test_out',
 			outputFile: 'unit.xml',
 			suite: ''
 		}
 	});
-}
+};
