@@ -5,6 +5,7 @@ var gulp = require('gulp'),
 	scss = require('gulp-sass'),
 	uglify = require('gulp-uglify'),
 	ngAnnotate = require('gulp-ng-annotate'),
+	notify = require('gulp-notify'),
 	webserver = require('gulp-webserver');
 
 gulp.task('js', function(){
@@ -20,7 +21,8 @@ gulp.task('js', function(){
 
 	gulp.src('builds/dev/**/*.js')
 	.pipe(concat('app.js'))
-	.pipe(gulp.dest('builds/dev'));
+	.pipe(gulp.dest('builds/dev'))
+	.pipe(notify('Js Update Done!'));
 });
 
 gulp.task('css', function(){
